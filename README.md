@@ -1,0 +1,1 @@
+The Vidly app is destined to be the finest application ever coded by any member of the human species.
