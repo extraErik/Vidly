@@ -30,9 +30,16 @@ namespace Vidly.Controllers
                 new Customer { Id = 1, Name = "Customer One" },
                 new Customer { Id = 2, Name = "Customer Two" }
             };
-            var specifiedCustomer = customers.Find(item => item.Id == id);
 
-            return View(specifiedCustomer);
+            var specifiedCustomer = customers.Find(item => item.Id == id);
+            if (specifiedCustomer != null)
+            {
+                return View(specifiedCustomer);
+            } else
+            {
+                return HttpNotFound();
+            }
+
         }
     }
 }
